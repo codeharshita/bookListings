@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Book Listing Application">
+        <div class="slds-p-around_medium">
+            <lightning-input  type="search" label="Search Books " onchange={changeHandler} value={searchKey} placeholder="Enter Book Name"></lightning-input>
+            <lightning-layout multiple-rows>
+                <template if:true={books}>
+                    <template for:each={books.items} for:item="book">
+                        <lightning-layout-item size="4" padding="around-small" key={book.id}>
+                            <div class="slds-box slds-p-around_medium slds-tabs_card">
+                                <template if:true={book.volumeInfo.imageLinks}>
+                                    <img src={book.volumeInfo.imageLinks.smallThumbnail} height="200px"  class="slds-align_absolute-center"/>
+                                </template>
+                                <div class="slds-text-heading_small"><strong>Title -</strong>{book.volumeInfo.title}</div>
+                                <div><strong>Published Date -</strong>{book.volumeInfo.publishedDate}</div>
+                                <div><strong>Sale Ability : </strong>{book.saleInfo.saleability}</div>
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </template>
+                
+            </lightning-layout>
+            
+        </div>
+    </lightning-card>
+</template>     
