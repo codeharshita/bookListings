@@ -19,4 +19,5 @@ The `sfdx-project.json` file contains useful configuration information for your 
 
 
 <h1>Glimpse Of Application</h1>
-![Screenshot 2024-10-02 160718](https://github.com/user-attachments/assets/414edbc4-7e7d-4d5d-96bf-0dd74696381a)
+
+![Screenshot 2024-10-02 160718](https://github.com/user-attachments/assets/fc251b37-5740-4176-807f-52698902fbc9)
