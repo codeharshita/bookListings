@@ -8,15 +8,11 @@ export default class BookApp extends LightningElement {
   changeHandler(event) {
     this.searchKey = event.target.value;
     console.log(this.searchKey);
-    
     if (this.searchKey === "") {
       this.searchKey=null;
-      console.log('Value ', this.searchKey);
-      
     } else {
       this.fetchBooks();
     }
-
   }
 
   connectedCallback() {
